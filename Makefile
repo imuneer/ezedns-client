@@ -12,10 +12,10 @@ define Package/ezedns-client
 	DEPENDS:= +libcurl #+libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
 	TITLE:=eZeDNSClient -- prints a snarky message
 endef
-define Build/Prepare
-	mkdir -p $(PKG_BUILD_DIR)
-	$(CP) ./src/* $(PKG_BUILD_DIR)/
+
+define Build/Compile
 endef
+
 define Package/ezedns-client/install	
 	$(INSTALL_DIR) $(1)/bin
 	mkdir -p $(1)/etc
