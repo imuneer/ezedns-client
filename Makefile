@@ -9,8 +9,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/ezedns-client
 	SECTION:=utils
 	CATEGORY:=Utilities
-	DEPENDS:= +libcurl +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
-	MAINTAINER:= eZeLink Telecom, Dubai, UAE <muneer@ezelink.net>
+	DEPENDS:= +libcurl #+libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
 	TITLE:=eZeDNSClient -- prints a snarky message
 endef
 define Build/Prepare
