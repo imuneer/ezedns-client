@@ -7,10 +7,10 @@ PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 include $(INCLUDE_DIR)/package.mk
 # The variables defined here should be self explanatory.
 define Package/ezedns-client
-	SECTION:=utils
-	CATEGORY:=Utilities
+	SECTION:=ezelink
+	CATEGORY:=eZeLink
 	DEPENDS:= +libcurl #+libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
-	TITLE:=eZeDNSClient -- prints a snarky message
+	TITLE:=eZeDNSClient -- dynamic dns client
 endef
 
 define Build/Compile
